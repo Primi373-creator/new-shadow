@@ -1481,23 +1481,22 @@ Typed *surrender* to surrender and admited defeat`
         shadow.sendMessage(m.chat, { image: { url: cok }, caption: 'Here it is...' }, { quoted: m })
         break;
 
-
-      case 'quotesanime': case 'quotes': case 'animequote': case 'animequotes': {
-        let { quotesAnime } = require('./lib/scraper')
-        let anu = await quotesAnime()
-        hasil = anu[Math.floor(Math.random() * anu.length)]
-        /*     let buttons = [
-                 {buttonId: `${prefix}quotesanime`, buttonText: {displayText: '>>'}, type: 1}
-             ]  */
-        let buttonMessage = {
-          text: `_${hasil.quotes}_\n\nBy '${hasil.karakter}', ${hasil.anime}\n\n- ${hasil.up_at}`,
-          /*     footer: 'shadow',
-               buttons: buttons,
-               headerType: 2  */
-        }
-        shadow.sendMessage(m.chat, buttonMessage, { quoted: m })
-      }
-        break;
+         case 'quotes': case 'quoteanime': {
+		let { quotesAnime } = require('./lib/scraper')
+                let anu = await quotesAnime()
+                result = anu[Math.floor(Math.random() * anu.length)]
+                let buttons = [
+                    {buttonId: `quotesanime`, buttonText: {displayText: 'ɴᴇxᴛ' }, type: 2}
+                ]
+                let buttonMessage = {
+                    text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
+                    footer: 'ᴘʀᴇꜱꜱ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ',
+                    buttons: buttons,
+                    headerType: 2
+                }
+                shadow.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+            break;
 
 
 
