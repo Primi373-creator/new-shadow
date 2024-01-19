@@ -1482,7 +1482,7 @@ Typed *surrender* to surrender and admited defeat`
         break;
 
 
-      case 'quotesanime': case 'quoteanime': case 'animequote': case 'animequotes': {
+      case 'quotesanime': case 'quotes': case 'animequote': case 'animequotes': {
         let { quotesAnime } = require('./lib/scraper')
         let anu = await quotesAnime()
         hasil = anu[Math.floor(Math.random() * anu.length)]
