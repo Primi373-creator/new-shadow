@@ -518,7 +518,7 @@ Typed *surrender* to surrender and admited defeat`
             externalAdreply: {
               title: "Powered by Cipher",
               body: " ",
-              thumbnail: fs.readFileSync("Assets/pic2.jpg"),
+              thumbnail: fs.readFileSync("Assets/images/pic2.jpg"),
               mediaType: 1,
               mediaUrl: 'https://wallpapercave.com/wp/wp10524580.jpg',
               sourceUrl: "https://wallpapercave.com/wp/wp10524580.jpg"
